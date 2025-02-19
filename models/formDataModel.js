@@ -11,7 +11,7 @@ const formDataSchema = new mongoose.Schema({
         unique: true,  // Ensure unique emails in the database
     },
     phone: {
-        type: Number,
+        type: String,
         required: true,
     },
     country: {
