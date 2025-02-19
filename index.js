@@ -17,7 +17,7 @@ app.use(express.static("public"));
 app.use("/api/details", Routes);
 
 // MongoDB Connection
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = "mongodb+srv://rawatrishabh76:9pximlAHJoMFA1w9@cluster0.hwguh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 if (!mongoURI) {
     console.error("❌ MONGO_URI is not defined in the .env file!");
     process.exit(1);
