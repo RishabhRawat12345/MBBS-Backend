@@ -11,7 +11,14 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+    cors({
+      origin: "*", // Adjust if needed
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true,
+    })
+  );
 app.use(bodyParser.json());
 app.use(express.static("public")); 
 app.use("/api/details", Routes);
